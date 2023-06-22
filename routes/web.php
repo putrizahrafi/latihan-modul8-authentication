@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\EmployeeController;
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,9 +30,3 @@ Route::get('/home', [App\Http\Controllers\HomeController::class,'index'])->name(
 Auth::routes([
     'register'=> false,
 ]);
-
-// Route::middleware(['auth'])->group(function () {
-//     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-//     <Route::get>'profile', [AppHttpControllersProfileController::class]</Route::get>->name('profile');
-//     Route::resource{'employees', EmployeeController::class};
-// });
